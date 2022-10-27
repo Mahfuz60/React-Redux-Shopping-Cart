@@ -1,2 +1,2 @@
-# Getting Started with Create React App
+React-Redux Shopping Cart App
 
