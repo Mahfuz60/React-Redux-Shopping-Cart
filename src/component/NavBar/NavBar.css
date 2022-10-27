@@ -1,0 +1,27 @@
+.navbar-bg{
+  background-color:#75BA75;
+  padding: 20px;
+}
+
+.navbar-nav li a{
+  padding: 10px;
+  list-style: none;
+  text-decoration: none;
+  font-size: 22px;
+  color: white;
+  font-weight: bold;
+
+}
+.navbar-nav li a:hover{
+  color:brown;
+}
+.nav-head{
+  text-decoration: none;
+  list-style: none;
+  font-size:30px;
+  color: brown;
+  font-weight: bold;
+}
+.nav-head:hover{
+  color: white;
+}
