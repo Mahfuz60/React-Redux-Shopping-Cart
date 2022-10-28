@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './NavBar.css'
+import './NavBar.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+
 
 const NavBar = () => {
   return (
@@ -8,9 +11,13 @@ const NavBar = () => {
       <nav className="navbar navbar-expand-lg navbar-bg  ">
         <div className="container-fluid ">
           <Link className='nav-head' to="/">E-home Shop</Link>
+
           <button className="navbar-toggler bg-light text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" >
-            <span className="navbar-toggler-icon"></span>
+         
+            <FontAwesomeIcon icon={faBars} />
+           
           </button>
+
           <div className="collapse navbar-collapse  " id="navbarNav">
             <ul className="navbar-nav mx-auto">
               <li className="nav-item">
@@ -22,7 +29,7 @@ const NavBar = () => {
               <li className="nav-item">
                 <Link>About</Link>
 
-              </li>
+              </li> 
 
             </ul>
           </div>
