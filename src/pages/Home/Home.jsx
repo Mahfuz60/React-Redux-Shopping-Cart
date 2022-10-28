@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div className='container'>
     
-      <h1 className='fw-bold text-danger mt-4'>Welcome to Redux Shopping Store</h1>
+      <h1 className='fw-bold text-danger' style={{marginTop:'100px'}}>Welcome to Redux Shopping Store</h1>
 
       <div className='mt-4'>
         <Products/>

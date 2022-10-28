@@ -8,7 +8,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 const NavBar = () => {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-bg  ">
+      <nav className="navbar navbar-expand-lg navbar-bg fixed-top ">
         <div className="container-fluid ">
           <Link className='nav-head' to="/">E-home Shop</Link>
 
@@ -27,7 +27,7 @@ const NavBar = () => {
                 <Link to='/cart'>Product</Link>
               </li>
               <li className="nav-item">
-                <Link>About</Link>
+                <Link>Cart Item:</Link>
 
               </li> 
 
