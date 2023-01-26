@@ -19,7 +19,7 @@ const NavBar = () => {
           </button>
 
           <div className="collapse navbar-collapse  " id="navbarNav">
-            <ul className="navbar-nav mx-auto">
+            <ul className="navbar-nav mx-auto d-flex">
               <li className="nav-item">
                 <Link to='/'>Home</Link>
               </li>
@@ -27,7 +27,7 @@ const NavBar = () => {
                 <Link to='/cart'>Product</Link>
               </li>
               <li className="nav-item">
-                <Link>Cart Item:</Link>
+                <Link>Cart Item: <span>0</span></Link>
 
               </li> 
 

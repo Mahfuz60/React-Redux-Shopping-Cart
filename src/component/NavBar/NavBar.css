@@ -1,5 +1,5 @@
 .navbar-bg{
-  background-color:#186b18;
+  background-color:#272927;
   padding: 20px;
   
 }
@@ -20,7 +20,7 @@
   text-decoration: none;
   list-style: none;
   font-size:30px;
-  color: brown;
+  color: rgb(190, 8, 8);
   font-weight: bold;
 }
 .nav-head:hover{
