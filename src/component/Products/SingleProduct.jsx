@@ -1,8 +1,18 @@
 import React from 'react';
 import './Products.css';
+import { add } from '../../store/cartSlice';
+import { useDispatch } from 'react-redux';
 
 const SingleProduct = ({ product }) => {
   const { title, price, image, description, rating, category } = product;
+  const dispatch=useDispatch();
+
+
+  const handleProduct=(product)=>{
+    dispatch(add(product));
+
+
+}
   return (
 
 
@@ -16,7 +26,7 @@ const SingleProduct = ({ product }) => {
         {/* <p class="card-text text-secondary">{description}</p> */}
 
       </div>
-      <button className='btn-cart'>Add to Cart</button>
+      <button className='btn-cart'  onClick={()=> handleProduct(product)}>Add to Cart</button>
 
 
 

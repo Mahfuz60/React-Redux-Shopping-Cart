@@ -2,10 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './NavBar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { useSelector } from 'react-redux';
 
 
 const NavBar = () => {
+  const items=useSelector((state)=>state.cart);
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-bg fixed-top ">
@@ -24,10 +26,10 @@ const NavBar = () => {
                 <Link to='/'>Home</Link>
               </li>
               <li className="nav-item">
-                <Link to='/cart'>Product</Link>
+                <Link to='/cart'>ProductsCart</Link>
               </li>
               <li className="nav-item">
-                <Link>Cart Item: <span>0</span></Link>
+                <Link>Cart Item: <span>{items.length}</span></Link>
 
               </li> 
 
