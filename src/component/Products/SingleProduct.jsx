@@ -13,6 +13,8 @@ const SingleProduct = ({ product }) => {
 
 
 }
+
+
   return (
 
 

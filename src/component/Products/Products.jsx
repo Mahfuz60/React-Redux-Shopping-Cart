@@ -1,19 +1,36 @@
 import React, { useEffect, useState } from 'react';
 import SingleProduct from './SingleProduct';
-
+import { fetchProduct } from '../../store/productSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { STATUS } from '../../store/productSlice';
 
 const Products = () => {
-  const [products, setProducts] = useState([]);
+  // const [products, setProducts] = useState([]);
+  const dispatch=useDispatch();
+  const{data:products,status}=useSelector((state=>state.product))
+  
 
   useEffect(() => {
-    const fetchProducts = async () => {
-      const res = await fetch('https://fakestoreapi.com/products');
-      const data = await res.json();
-      setProducts(data);
+    dispatch(fetchProduct());
+    
 
-    };
-    fetchProducts();
+//fetch to api component
+
+    // const fetchProducts = async () => {
+    //   const res = await fetch('https://fakestoreapi.com/products');
+    //   const data = await res.json();
+    //   setProducts(data);
+
+    // };
+    // fetchProducts();
+
+
   }, [products])
+
+  if(status===STATUS.LOADING){
+    return <p className='text-warning'>Loading......</p>;
+  }
+
 
   return (
     
@@ -33,6 +50,9 @@ const Products = () => {
       }
      
      </div>
+     
+     
+  
      
      
   );
