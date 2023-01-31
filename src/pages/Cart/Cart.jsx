@@ -18,11 +18,11 @@ const Cart = () => {
       <div className='cartWrapper'>
         {
 
-          products.map((product, id) => (
+          products.map((product) => (
 
-            <div className='cartProduct' key={id}>
+            <div className='cartProduct' key={product.id}>
 
-              <div className='row mt-3 cartProductDetails'>
+              <div className='row mt-3 cartProductDetails' >
                 <div className='col-md-10 col-10 mx-auto '>
                   <img src={product.image} alt="" className='image-fluid cardImg '  />
                   <h5>Title:{product.title}</h5>

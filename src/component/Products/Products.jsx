@@ -6,42 +6,50 @@ import { STATUS } from '../../store/productSlice';
 
 const Products = () => {
   // const [products, setProducts] = useState([]);
-  const dispatch=useDispatch();
-  const{data:products,status}=useSelector((state=>state.product))
-  
 
+
+  const dispatch=useDispatch();
+  const{data:products,status}=useSelector((state=>state.product));
   useEffect(() => {
     dispatch(fetchProduct());
     
+  }, [])
+  
 
-//fetch to api component
+  // fetch to api component
 
-    // const fetchProducts = async () => {
-    //   const res = await fetch('https://fakestoreapi.com/products');
-    //   const data = await res.json();
-    //   setProducts(data);
+  // useEffect(() => {
+    
+  //   const fetchProducts = async () => {
+  //     const res = await fetch('https://fakestoreapi.com/products');
+  //     const data = await res.json();
+  //     setProducts(data);
 
-    // };
-    // fetchProducts();
+  //   };
+  //   fetchProducts();
 
 
-  }, [products])
+  // }, [products])
 
-  if(status===STATUS.LOADING){
-    return <p className='text-warning'>Loading......</p>;
+
+  if(status===STATUS.LOADING) {
+    return <h5 className='text-info'>Loading.....</h5>;
+  } 
+  if(status===STATUS.ERROR){
+    return <h5 className='text-warning'>Something went to Wrong!.....</h5>
   }
-
-
-  return (
+    
+  
+return (
     
      <div className='row'>
       <h3 className='text-info'>Products List:</h3>
       {
-        products.map((product,id)=>(
+        products.map((product)=>(
        
-           <div className='col-md-4 col-12 d-flex '>
+           <div className='col-md-4 col-12 d-flex ' key={product.id}>
           
-          <SingleProduct key={id} product={product}/>
+          <SingleProduct product={product}/>
         
         
         </div>
